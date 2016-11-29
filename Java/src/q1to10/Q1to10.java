@@ -90,12 +90,23 @@ public class Q1to10 {
 	    return gcd.intValue();
 	}
 	
+	public static long q6() {
+		
+		LongStream rangeStream = LongStream.Closed(1, 100);
+		long squareSum = rangeStream.map(w -> Math.pow(w, 2)).sum();
+		long sumSquare = Math.pow(rangeStream.sum(), 2);
+		
+		return sumSquare - squareSum
+		
+	}
+	
 	public static void main(String[] args) {
 		System.out.println("Q1: " + q1());
 		System.out.println("Q2: " + q2());
 		System.out.println("Q3: " + q3());
 		System.out.println("Q4: " + q4());
 		System.out.println("Q5: " + q5());
+		System.out.println("Q6: " + q6());
 	}
 	
 }
